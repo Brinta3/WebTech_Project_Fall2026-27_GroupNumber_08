@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <link rel="stylesheet" href="../Design/Style.css">
+    <script src="../JS/Common.js"></script>
+    <script src="../JS/Attendance.js"></script>
+</head>
+<body class="admin">
+    <img src="../Images/logo.png" id="logo" alt="Project Logo">
+    <div class="header"><h1>Student Attendance</h1><p>Mark and review daily attendance</p></div>
+    <div class="topnav">
+        <a href="../index.html">Dashboard</a>
+        <a href="AddStudent.html">Add Student</a>
+        <a href="ManageStudent.html">Manage Students</a>
+        <a href="Attendance.html" class="active">Attendance</a>
+        <a href="Results.html">Results</a>
+    </div>
+
+    <fieldset>
+        <legend>Attendance Date</legend>
+        <table>
+            <tr><td><label for="AttendanceDate">Select Date:</label></td><td><input type="date" id="AttendanceDate"><p class="error" id="DateError"></p></td></tr>
+        </table>
+        <p class="hint">Choose Present or Absent for each student, then save attendance.</p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mark Attendance</legend>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead><tr><th>Student Name</th><th>Student ID</th><th>Department</th><th>Attendance Status</th></tr></thead>
+                <tbody id="attendanceTableBody"><tr><td colspan="4">No students found. Add students first.</td></tr></tbody>
+            </table>
+        </div>
+        <p id="AttendanceResult" class="result-text"></p>
+        <button type="button" id="saveAttendance" class="action-button primary-button">Save Attendance</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Attendance Summary</legend>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead><tr><th>Date</th><th>Total</th><th>Present</th><th>Absent</th></tr></thead>
+                <tbody id="attendanceSummary"><tr><td colspan="4">No attendance records yet.</td></tr></tbody>
+            </table>
+        </div>
+    </fieldset>
+    <div class="footer"><h5>Student Management System - Admin Panel</h5></div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System - Admin Dashboard</title>
+    <link rel="stylesheet" href="Design/Style.css">
+    <script src="JS/Common.js"></script>
+    <script src="JS/Index.js"></script>
+</head>
+<body class="admin">
+    <img src="Images/logo.png" id="logo" alt="Project Logo">
+    <div class="header">
+        <h1>Student Management System</h1>
+        <p>Admin Dashboard - Manage students, attendance and results</p>
+    </div>
+    <div class="topnav">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="Page/AddStudent.html">Add Student</a>
+        <a href="Page/ManageStudent.html">Manage Students</a>
+        <a href="Page/Attendance.html">Attendance</a>
+        <a href="Page/Results.html">Results</a>
+    </div>
+
+    <div class="welcome-box">
+        <h2>Welcome, Admin!</h2>
+        <p>Choose a section below to manage the Student Management System.</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card"><span>Total Students</span><strong id="totalStudents">0</strong></div>
+        <div class="stat-card"><span>Departments</span><strong id="totalDepartments">0</strong></div>
+        <div class="stat-card"><span>Attendance Records</span><strong id="totalAttendance">0</strong></div>
+        <div class="stat-card"><span>Result Records</span><strong id="totalResults">0</strong></div>
+    </div>
+
+    <div class="user-grid">
+        <div class="user-card admin">
+            <h2>Add Student</h2>
+            <p>Enter a new student's personal and academic information.</p>
+            <button type="button" class="user-btn" onclick="goToPage('add')">Add Student</button>
+        </div>
+        <div class="user-card manage">
+            <h2>Manage Students</h2>
+            <p>View, search, update and delete student records.</p>
+            <button type="button" class="user-btn" onclick="goToPage('manage')">Manage Students</button>
+        </div>
+        <div class="user-card attendance">
+            <h2>Attendance</h2>
+            <p>Mark daily attendance and view attendance summaries.</p>
+            <button type="button" class="user-btn" onclick="goToPage('attendance')">Manage Attendance</button>
+        </div>
+        <div class="user-card results">
+            <h2>Results</h2>
+            <p>Add course marks and view student academic results.</p>
+            <button type="button" class="user-btn" onclick="goToPage('results')">Manage Results</button>
+        </div>
+    </div>
+
+    <div class="notice">
+        <strong>Project note:</strong> This is a front-end academic sample. Information is stored in this browser's LocalStorage.
+    </div>
+    <div class="footer"><h5>Student Management System - Admin Panel</h5></div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* Shared stylesheet - based on the supplied HospitalProject design */
+*{box-sizing:border-box}
+body{
+    font-family:Cambria,Cochin,Georgia,Times,'Times New Roman',serif;
+    font-size:16px;color:#1d2733;background-color:#eef3f8;
+    max-width:900px;margin:0 auto;padding:30px 20px
+}
+#logo{display:block;width:120px;height:120px;margin:0 auto 10px auto;border-radius:50%;object-fit:cover}
+.header{text-align:center;color:white;padding:14px;margin:10px 0;background-color:#1f3a5f;border-radius:6px}
+.header h1{margin:0;font-size:28px}
+.header p{margin:6px 0 0;color:#dfe6ee}
+.topnav{overflow:hidden;background-color:gray;margin:10px 0 20px;border-radius:6px}
+.topnav a{float:left;display:block;color:white;padding:12px 14px;text-decoration:none}
+.topnav a:hover{background-color:#555}
+.topnav a.active{background-color:#1f3a5f}
+.footer{background-color:gray;color:white;text-align:center;padding:4px;margin-top:20px;border-radius:6px}
+.footer h5{margin:8px 0}
+.welcome-box{background:#fff;border:1px solid #c9d3de;border-left:6px solid #1f3a5f;border-radius:8px;padding:17px 20px;margin:0 0 16px}
+.welcome-box h2{margin:0 0 5px;color:#1f3a5f}
+.welcome-box p{margin:0;color:#4a5868}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.stat-card{background:#fff;border:1px solid #c9d3de;border-radius:8px;padding:15px;text-align:center}
+.stat-card span{display:block;color:#536171;font-size:14px}
+.stat-card strong{display:block;font-size:28px;color:#1f3a5f;margin-top:5px}
+.user-grid{display:flex;flex-wrap:wrap;gap:16px}
+.user-card{flex:1 1 calc(50% - 16px);background:#fff;border:1px solid #c9d3de;border-top:6px solid gray;border-radius:8px;padding:20px;text-align:center}
+.user-card h2{margin:0 0 6px;color:#1d2733}
+.user-card p{color:#4a5868;margin:0 0 16px;min-height:40px}
+.user-card.admin{border-top-color:#1f3a5f}
+.user-card.manage{border-top-color:#0f6e6e}
+.user-card.attendance{border-top-color:#6a3d8f}
+.user-card.results{border-top-color:#a4541c}
+.user-btn,.action-button{padding:11px 15px;font-family:Cambria,Cochin,Georgia,Times,'Times New Roman',serif;font-size:16px;font-weight:bold;color:white;border:0;border-radius:5px;cursor:pointer}
+.user-btn{width:100%;background:#1f3a5f}
+.user-card.manage .user-btn{background:#0f6e6e}
+.user-card.attendance .user-btn{background:#6a3d8f}
+.user-card.results .user-btn{background:#a4541c}
+.user-btn:hover,.action-button:hover{opacity:.85}
+fieldset{background-color:#fffaf2;border:1px solid burlywood;border-radius:8px;padding:20px;margin-bottom:20px}
+legend{color:white;background-color:#1f3a5f;border-radius:6px;padding:6px 14px;font-weight:bold}
+table{width:100%;border-collapse:collapse}
+td{padding:8px 6px;vertical-align:top}
+td:first-child{width:34%;padding-top:16px;font-weight:bold}
+input[type="text"],input[type="number"],input[type="password"],input[type="email"],input[type="tel"],input[type="date"],input[type="file"],input[type="search"],select,textarea{
+    width:100%;padding:8px 10px;font-family:Cambria,Cochin,Georgia,Times,'Times New Roman',serif;
+    font-size:16px;border:1px solid #555;border-radius:5px;background-color:azure
+}
+textarea{height:90px;resize:vertical}
+.choice{display:inline-block;margin:10px 14px 0 0}
+input[type="radio"],input[type="checkbox"]{accent-color:#1f3a5f}
+.error{color:red;font-size:14px;margin:4px 0 0}
+.error:empty{display:none}
+.hint{color:#6b7785;font-size:13px;margin:4px 0 0}
+#ResultText,.result-text{text-align:center;font-weight:bold;padding:10px;border-radius:6px}
+#ResultText:empty,.result-text:empty{display:none}
+#ResultText.success,.result-text.success{color:#1b6b2a;background:#e3f4e6;border:1px solid #9fd3a9}
+#ResultText.failed,.result-text.failed{color:#a11b1b;background:#fbe5e5;border:1px solid #efaaaa}
+input[type="submit"],input[type="reset"]{width:48%;padding:10px 20px;font-family:Cambria,Cochin,Georgia,Times,'Times New Roman',serif;font-size:16px;font-weight:bold;color:white;border:0;border-radius:5px;cursor:pointer;margin-left:4px}
+#submit{background:#1f3a5f}
+#reset{background:black}
+#submit:hover,#reset:hover{opacity:.85}
+.notice{background:#fff;border:1px solid #c9d3de;border-radius:7px;padding:12px 15px;margin-top:18px;color:#536171;font-size:14px}
+.search-row{display:grid;grid-template-columns:2fr 1fr auto;gap:10px;align-items:center}
+.action-button{background:#555}
+.primary-button{background:#1f3a5f;margin-top:12px}
+.table-wrap{width:100%;overflow-x:auto}
+.data-table{min-width:680px;background:#fff}
+.data-table th{background:#1f3a5f;color:#fff;text-align:left;padding:10px 8px}
+.data-table td{padding:10px 8px;border-bottom:1px solid #d7dfe7;vertical-align:middle}
+.data-table td:first-child{width:auto;padding-top:10px;font-weight:normal}
+.data-table tbody tr:nth-child(even){background:#f5f8fb}
+.data-table button{font-family:inherit;font-size:14px;border:0;border-radius:4px;padding:6px 9px;cursor:pointer;margin:2px}
+.edit-btn{background:#e2edf8;color:#1f3a5f}
+.delete-btn{background:#fbe5e5;color:#a11b1b}
+.status-select{min-width:120px}
+.empty-cell{text-align:center;color:#687789;padding:18px!important}
+@media(max-width:650px){
+    body{padding:18px 12px}
+    .header h1{font-size:23px}
+    .topnav a{padding:10px 9px;font-size:14px}
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .user-card{flex-basis:100%}
+    td{display:block;width:100%}
+    td:first-child{width:100%;padding-bottom:0}
+    input[type="submit"],input[type="reset"]{width:100%;margin:6px 0 0}
+    .search-row{grid-template-columns:1fr}
+}
