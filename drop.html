@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drop Course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Course Drop Application</h2>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="drop.html">Drop Course</a>
+        <a href="marks.html">Marks</a>
+        <a href="logout.html">Logout</a>
+    </nav>
+
+    <form id="dropForm">
+
+        <label>Student ID:</label>
+        <input type="text" id="dropId" placeholder="Enter Student ID">
+
+        <label>Select Course:</label>
+
+        <input type="radio" name="course" value="Web Technology">
+        Web Technology
+
+        <input type="radio" name="course" value="Database">
+        Database
+
+        <input type="radio" name="course" value="Java">
+        Java
+
+        <br><br>
+
+        <label>Reason for Dropping:</label>
+
+        <select id="dropReason">
+            <option value="">Select a reason</option>
+            <option value="Personal Reasons">Personal Reasons</option>
+            <option value="Financial Problems">Financial Problems</option>
+            <option value="Health Issues">Health Issues</option>
+            <option value="Course Difficulty">Course Difficulty</option>
+            <option value="Schedule Conflict">Schedule Conflict</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <br><br>
+
+        <label>Additional Details:</label>
+        <textarea id="reason" placeholder="Explain your reason"></textarea>
+
+        <br><br>
+
+        <button type="submit">Apply for Drop</button>
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
