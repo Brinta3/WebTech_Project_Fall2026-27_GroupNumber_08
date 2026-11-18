@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>University Management System</h2>
+        <a href="login.html">Logout</a>
+    </div>
+
+    <div class="container">
+
+        <h1>Employee Dashboard</h1>
+
+        <h3>Welcome, <span id="employeeName"></span>!</h3>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h2>Vacation Management</h2>
+                <p>Apply for vacation and check your requests.</p>
+                <a href="vacation.html">Open Vacation</a>
+            </div>
+
+            <div class="card">
+                <h2>Attendance Management</h2>
+                <p>Check in, check out and view attendance.</p>
+                <a href="attendance.html">Open Attendance</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        let name = localStorage.getItem("employeeName");
+
+        document.getElementById("employeeName").innerHTML = name || "Employee";
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vacation Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>Vacation Management</h2>
+        <a href="dashboard.html">Dashboard</a>
+    </div>
+
+    <div class="container">
+
+        <h1>Apply for Vacation</h1>
+
+        <form id="vacationForm">
+
+            <label>Employee ID</label>
+            <input type="text" id="empId"
+                   placeholder="Enter Employee ID">
+
+            <label>Leave Type</label>
+            <select id="leaveType">
+                <option value="">Select Leave Type</option>
+                <option value="Casual Leave">Casual Leave</option>
+                <option value="Sick Leave">Sick Leave</option>
+                <option value="Annual Leave">Annual Leave</option>
+                <option value="Emergency Leave">Emergency Leave</option>
+            </select>
+
+            <label>Start Date</label>
+            <input type="date" id="startDate">
+
+            <label>End Date</label>
+            <input type="date" id="endDate">
+
+            <label>Reason</label>
+            <textarea id="reason"
+                placeholder="Enter your reason"></textarea>
+
+            <button type="submit">Submit Application</button>
+
+            <p id="error"></p>
+
+        </form>
+
+        <h2>Vacation History</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Leave Type</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="vacationList"></tbody>
+        </table>
+
+    </div>
+
+    <script src="vacation.js"></script>
+
+</body>
+</html>

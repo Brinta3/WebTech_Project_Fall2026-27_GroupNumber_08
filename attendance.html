@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>Attendance Management</h2>
+        <a href="dashboard.html">Dashboard</a>
+    </div>
+
+    <div class="container">
+
+        <h1>My Attendance</h1>
+
+        <form id="attendanceForm">
+
+            <label>Employee ID</label>
+            <input type="text" id="empId"
+                   placeholder="Enter Employee ID">
+
+            <label>Date</label>
+            <input type="date" id="date">
+
+            <label>Check In Time</label>
+            <input type="time" id="checkIn">
+
+            <label>Check Out Time</label>
+            <input type="time" id="checkOut">
+
+            <button type="submit">Submit Attendance</button>
+
+        </form>
+
+        <h2>Attendance History</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Date</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                </tr>
+            </thead>
+
+            <tbody id="attendanceList"></tbody>
+        </table>
+
+    </div>
+
+    <script src="attendance.js"></script>
+
+</body>
+</html>
